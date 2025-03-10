@@ -42,7 +42,7 @@ spring:
           predicates:
           - Path=/license/**
           filters:
-          - RewritePath=/license/(?<path>.*), /$\{path}
+          - StripPrefix=1
           - RemoveRequestHeader= Cookie,Set-Cookie
 
 
