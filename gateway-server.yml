@@ -44,6 +44,7 @@ spring:
           filters:
           - StripPrefix=1
           - RemoveRequestHeader= Cookie,Set-Cookie
+          - AddResponseHeader=X-Response-Time, "#{T(java.time.Instant).now()}"
 
 
 keycloak:
