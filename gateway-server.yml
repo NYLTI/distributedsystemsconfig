@@ -51,13 +51,13 @@ spring:
             - Path=/google/**
           filters:
             - SetPath=/
-        - id: baylor-route
-          uri: https://www.baylor.edu
-          predicates:
-            - Path=/baylor/**
-          filters:
-            - RemoveRequestHeader=Cookie
-            - SetPath=/
+        # - id: baylor-route
+        #   uri: https://www.baylor.edu
+        #   predicates:
+        #     - Path=/baylor/**
+        #   filters:
+        #     - RemoveRequestHeader=Cookie
+        #     - SetPath=/
 
 
 keycloak:
