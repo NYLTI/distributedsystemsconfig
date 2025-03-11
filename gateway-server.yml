@@ -44,8 +44,8 @@ spring:
           filters:
           - StripPrefix=1
           - RemoveRequestHeader= Cookie,Set-Cookie
-          - AddRequestHeader=X-Request-Time, "{time}"
-          - AddResponseHeader=X-Response-Time, "{time}"
+          - AddRequestHeader=X-Request-ID, "{random.uuid}"
+          - AddResponseHeader=X-Response-ID, "${random.uuid}"
 
 
 keycloak:
