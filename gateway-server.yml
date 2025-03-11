@@ -45,6 +45,12 @@ spring:
           - StripPrefix=1
           - RemoveRequestHeader= Cookie,Set-Cookie
           - AddResponseHeader=X-Transaction-ID, "${random.uuid}"
+      - - id: google-route
+          uri: https://www.google.com
+          predicates:
+            - Path=/google/**
+          filters:
+            - SetPath=/
 
 
 keycloak:
