@@ -1,0 +1,17 @@
+spring:
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8080/realms/Spmia-realm
+          jwk-set-uri: http://localhost:8080/realms/Spmia-realm/protocol/openid-connect/certs
+      client:
+        registration:
+          keycloak:
+            client-id: ds-ostock
+            client-secret: <NEW_CLIENT_SECRET>
+            authorization-grant-type: client_credentials
+            scope: openid
+        provider:
+          keycloak:
+            issuer-uri: http://localhost:8080/realms/Spmia-realm
