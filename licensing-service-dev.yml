@@ -4,6 +4,7 @@ spring:
       client:
         registration:
           keycloak:
+            provider: keycloak
             client-id: licensing-service
             client-secret: UAKOomxRC7c0SD96YeA5jGNxmY6m4Egg
             authorization-grant-type: client_credentials
@@ -12,3 +13,5 @@ spring:
           keycloak:
             token-uri: http://localhost:8080/realms/spmia-realm/protocol/openid-connect/token
             user-info-uri: http://localhost:8080/realms/spmia-realm/protocol/openid-connect/userinfo
+            authorization-uri: http://localhost:8080/realms/spmia-realm/protocol/openid-connect/auth
+            jwk-set-uri: http://localhost:8080/realms/spmia-realm/protocol/openid-connect/certs
