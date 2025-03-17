@@ -10,5 +10,5 @@ spring:
             scope: openid
         provider:
           keycloak:
-            issuer-uri: http://localhost:8080/realms/spmia-realm
+            token-uri: http://localhost:8080/realms/spmia-realm/protocol/openid-connect/token
             user-info-uri: http://localhost:8080/realms/spmia-realm/protocol/openid-connect/userinfo
