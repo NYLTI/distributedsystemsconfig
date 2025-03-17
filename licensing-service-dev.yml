@@ -1,0 +1,23 @@
+example:
+  property: "I AM DEV"
+
+spring:
+#   datasource:
+#     url: jdbc:postgresql://database:5432/ostock_dev?sslmode=disable
+#     username: postgres
+#     password: "{cipher}f4609209a3e75d8ac79a5e3063ce151c2cd28aa431170bb06974b9421e807b6a"
+
+  security:
+    oauth2:
+      resource:
+        user-info-uri: http://localhost:8080/realms/spmia-realm/protocol/openid-connect/userinfo
+      client:
+        registration:
+          keycloak:
+            client-id: licensing-service
+            client-secret: UAKOomxRC7c0SD96YeA5jGNxmY6m4Egg
+            authorization-grant-type: client_credentials
+            scope: openid
+        provider:
+          keycloak:
+            issuer-uri: http://localhost:8080/realms/spmia-realm
